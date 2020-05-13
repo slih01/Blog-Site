@@ -61,9 +61,9 @@ app.post("/compose", function(req, res){
     postContent: req.body.postBody
   });
   post.save();
-
+if (!err) {
   res.redirect("/");
-
+}
 });
 
 app.get("/posts/:postName", function(req, res){
